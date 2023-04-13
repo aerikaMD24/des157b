@@ -1,0 +1,32 @@
+#myVideo {
+    width: 75%;
+    display: block;
+    margin: auto;
+    transform-origin: center;
+}
+
+#myVideo:hover {
+    animation: tilt 2s;
+}
+
+.tilted {
+    animation: tilt 2s;
+}
+
+@keyframes tilt {
+    0% {
+        transform: rotate(0);
+    }
+    20% {
+        transform: rotate(10deg);
+    }
+    40% {
+        transform: rotate(0);
+    }
+    80% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
