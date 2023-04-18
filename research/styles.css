@@ -1,0 +1,30 @@
+body {
+    width: 80%;
+    margin: auto;
+    background-color: blanchedalmond;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #915b26;
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+figcaption {
+    width: 60%;
+    margin: auto;
+    text-align: right;
+    font-style: italic;
+    color: #b46d26 ;
+}
+
+p {
+    width: 60%;
+    margin: auto;
+    line-height: 1.5em;;
+}
