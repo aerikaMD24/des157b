@@ -6,17 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blockbuster Video</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Play:wght@400;700&display=swap" rel="stylesheet"> 
     <link href="styles.css" rel="stylesheet" />
     <script src="script.js" defer></script>
+    <link rel="preload" href="media/loop.mp4" as="video" type="video/mp4">
+    <link rel="preload" href="sequence.mp4" as="video" type="video/mp4">
+    <link rel="preload" href="media/static.mp4" as="video" type="video/mp4">
 </head>
 <body>
-    <h1>Let's test rotating lolllll</h1>
-    <p>Please do not touch anything :D</p>
-    <video id="myVideo" controls muted autoplay loop playinline>
-        <source src="../videoAPI2/media/testVideo.webm" type="video/webm">
-        <source src="../videoAPI2/media/testVideo.mp4" type="video/mp4">
+    <h1>Welcome, subject #<span class="num">XX</span></h1>
+
+    <p id="instructions">Thank you for participating in this study. Our live camera will connect with the Doctor shortly</p>
+
+    <img id="glasses" src="media/glasses.svg">
+
+    <video id="myVideo" controls muted autoplay playinline>
+        <source src="media/intro.webm" type="video/webm">
+        <source src="media/intro.mp4" type="video/mp4">
     </video>
-    <button>Don't Click me Please</button>
+    
+    <section id="intro">
+        <p id="line1" class="hidden">Oh! You’re rather early today Subject #<span class="num"></span>!</p>
+        <p id="line2" class="hidden">I’m afraid I still need time to set up, so stay here!</p>
+        <p id="line3" class="hidden">And whatever you do, <spa class="red">do not touch anything!</span></p>
+    </section>
+
+    <!-- <section id="sequence">
+        <p id="three" class="hidden">Here is some text</p>
+        <p id="two" class="hidden">and here is more</p>
+        <p id="one" class="hidden">even more.</p>
+    </section> -->
+    
+    <div id="button" class="hidden">
+        <div id="press"></div>
+        <div id="buttonBase"></div>
+    </div>
+    
+    <!-- <button>Don't Click me Please</button> -->
     
 </body>
 </html>
