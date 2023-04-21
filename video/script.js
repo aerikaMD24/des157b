@@ -2,16 +2,29 @@
     'use strict';
     console.log('reading js');
 
+    // Basic Elements
     const btn = document.querySelector('#button');
     const video = document.querySelector('#myVideo');
-    const source = document.querySelector('source')
-    const randNum = Math.ceil((Math.random() * 90) + 9)
+    const instructions = document.querySelector('#instructions')
+    const source = document.querySelector('source');
 
+    // Random test subject number
+    const randNum = Math.ceil((Math.random() * 90) + 9)
+    const nums = document.querySelectorAll('.num');
+    for (let i = 0; i < nums.length; i++) {
+        nums[i].innerHTML = randNum;
+    }
+
+    // For the loading icon
+    const loading = document.querySelector('#glasses');
+    video.addEventListener('playing', function(){
+        loading.className = 'hidden';
+    })
+
+    // Intro text
     const line1 = document.querySelector('#line1');
     const line2 = document.querySelector('#line2');
     const line3 = document.querySelector('#line3');
-
-    const loading = document.querySelector('#glasses')
 
     const intro = {
         start: [0, 4, 9],
@@ -19,8 +32,8 @@
         line: [line1, line2, line3]
     }
 
+    // Time Checking
     const intervalID = setInterval(checkTime, 1000);
-
     function checkTime() {
 
         for (let i = 0; i < intro.start.length; i++) {
@@ -33,13 +46,28 @@
             }
         }
     }
-    
-    document.querySelectorAll('.num')[0].innerHTML = randNum;
-    document.querySelectorAll('.num')[1].innerHTML = randNum;
 
+    // When the Intro video ends... go to the loop
+    video.addEventListener('ended', goToLoop);
+
+    function goToLoop() {
+        hideAll();
+        instructions.innerHTML = '<span class="red">Remember: Do not touch anything!</span>';
+
+        source.setAttribute('src', 'media/loop.mp4');
+        video.load();
+        video.play();
+        video.setAttribute('loop', 'loop');
+
+        btn.className = 'showing';
+    }
+    
+    // When button is pressed... (even though I said not to touch anyhting)
     btn.addEventListener('click', function(){
+
         hideAll();
         video.removeAttribute('loop');
+        instructions.innerHTML = '<span class="red">Inititating Earthquake Sequence... </span><i> (What happened to not touching anything?)</i>';
 
         // tilt the video like an earthquacke
         video.className = 'tilted';
@@ -56,19 +84,13 @@
 
     })
 
-    video.addEventListener('ended', goToLoop);
+    
 
-    function goToLoop() {
-        hideAll();
-        source.setAttribute('src', 'media/loop.mp4');
-        video.load();
-        video.play();
-        video.setAttribute('loop', 'loop');
-        btn.className = 'showing';
-    }
+    
 
     function goToStatic() {
         hideAll();
+        instructions.innerHTML = 'Well, there goes the experiment.. <i>Great job</i>';
         source.setAttribute('src', 'media/static.mp4');
         video.load();
         video.play();
@@ -80,10 +102,8 @@
             intro.line[i].className = 'hidden';
         }
     }
-        
-    video.addEventListener('playing', function(){
-        loading.className = 'hidden';
-    })
+    
+    
 
 
 })()

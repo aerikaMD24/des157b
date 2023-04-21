@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blockbuster Video</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Play:wght@400;700&display=swap" rel="stylesheet"> 
-    <link href="styles.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet">
     <script src="script.js" defer></script>
     <link rel="preload" href="media/loop.mp4" as="video" type="video/mp4">
     <link rel="preload" href="sequence.mp4" as="video" type="video/mp4">
@@ -20,31 +20,23 @@
 
     <p id="instructions">Thank you for participating in this study. Our live camera will connect with the Doctor shortly</p>
 
-    <img id="glasses" src="media/glasses.svg">
+    <img id="glasses" src="media/glasses.svg" alt="glasses icon">
 
-    <video id="myVideo" controls muted autoplay playinline>
+    <video id="myVideo" muted autoplay>
         <source src="media/intro.webm" type="video/webm">
         <source src="media/intro.mp4" type="video/mp4">
     </video>
     
-    <section id="intro">
+    <div id="intro">
         <p id="line1" class="hidden">Oh! You’re rather early today Subject #<span class="num"></span>!</p>
         <p id="line2" class="hidden">I’m afraid I still need time to set up, so stay here!</p>
-        <p id="line3" class="hidden">And whatever you do, <spa class="red">do not touch anything!</span></p>
-    </section>
-
-    <!-- <section id="sequence">
-        <p id="three" class="hidden">Here is some text</p>
-        <p id="two" class="hidden">and here is more</p>
-        <p id="one" class="hidden">even more.</p>
-    </section> -->
+        <p id="line3" class="hidden">And whatever you do, <span class="red">do not touch anything!</span></p>
+    </div>
     
     <div id="button" class="hidden">
         <div id="press"></div>
         <div id="buttonBase"></div>
     </div>
-    
-    <!-- <button>Don't Click me Please</button> -->
     
 </body>
 </html>
