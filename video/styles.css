@@ -115,7 +115,7 @@ h1 {
     transform: translate(-50%, -50%);
     background-color: #b11818;
     border-radius: 15px;
-    transition: 1s top ease-in;
+    transition: 0.5s top ease-in;
 }
 
 #buttonBase {

@@ -12,17 +12,17 @@
     <link href="styles.css" rel="stylesheet">
     <script src="script.js" defer></script>
     <link rel="preload" href="media/loop.mp4" as="video" type="video/mp4">
-    <link rel="preload" href="sequence.mp4" as="video" type="video/mp4">
+    <link rel="preload" href="media/sequence.mp4" as="video" type="video/mp4">
     <link rel="preload" href="media/static.mp4" as="video" type="video/mp4">
 </head>
 <body>
-    <h1>Welcome, subject #<span class="num">XX</span></h1>
+    <h1><span id="not"></span> Welcome, subject #<span class="num">XX</span></h1>
 
-    <p id="instructions">Thank you for participating in this study. Our live camera will connect with the Doctor shortly</p>
+    <p id="instructions">Thank you for participating in this study. Our live camera will connect you with the Doctor shortly</p>
 
     <img id="glasses" src="media/glasses.svg" alt="glasses icon">
 
-    <video id="myVideo" muted autoplay>
+    <video id="myVideo" controls muted autoplay>
         <source src="media/intro.webm" type="video/webm">
         <source src="media/intro.mp4" type="video/mp4">
     </video>
@@ -32,12 +32,6 @@
         <p id="line2" class="hidden">I’m afraid I still need time to set up, so stay here!</p>
         <p id="line3" class="hidden">And whatever you do, <span class="red">do not touch anything!</span></p>
     </div>
-
-    <!-- <section id="sequence">
-        <p id="three" class="hidden">Here is some text</p>
-        <p id="two" class="hidden">and here is more</p>
-        <p id="one" class="hidden">even more.</p>
-    </section> -->
     
     <div id="button" class="hidden">
         <div id="press"></div>

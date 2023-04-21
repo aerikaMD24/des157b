@@ -4,9 +4,11 @@
 
     // Basic Elements
     const btn = document.querySelector('#button');
+    const btnPress = document.querySelector('#press');
     const video = document.querySelector('#myVideo');
     const instructions = document.querySelector('#instructions')
     const source = document.querySelector('source');
+    const not = document.querySelector('#not');
 
     // Random test subject number
     const randNum = Math.ceil((Math.random() * 90) + 9)
@@ -65,13 +67,26 @@
     // When button is pressed... (even though I said not to touch anyhting)
     btn.addEventListener('click', function(){
 
-        hideAll();
+        // button presssing 
+        btnPress.style.top = '50%';
+        setTimeout(function(){
+            btnPress.style.top = '40%';
+        }, 500)
+
+        if(source.getAttribute('src') === 'media/static.mp4' || source.getAttribute('src') === 'media/static.webm') {
+            instructions.innerHTML = '<span class="red">Inititating Time Reset Sequence... </span><i> (Try not to touch anything this time?)</i>';
+            setTimeout(function(){
+                location.reload();
+            }, 5000)
+        } else {
+            hideAll();
         video.removeAttribute('loop');
         instructions.innerHTML = '<span class="red">Inititating Earthquake Sequence... </span><i> (What happened to not touching anything?)</i>';
 
+        
+
         // tilt the video like an earthquacke
         video.className = 'tilted';
-        console.log('tilt');
         setTimeout(function(){
             video.classList.remove('tilted');
         }, 10000)
@@ -81,6 +96,7 @@
         video.load();
         video.play();
         video.addEventListener('ended', goToStatic);
+        }
 
     })
 
@@ -91,6 +107,8 @@
     function goToStatic() {
         hideAll();
         instructions.innerHTML = 'Well, there goes the experiment.. <i>Great job</i>';
+        not.innerHTML = 'NOT';
+        not.className ='red';
         source.setAttribute('src', 'media/static.mp4');
         video.load();
         video.play();
