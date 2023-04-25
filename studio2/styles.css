@@ -1,6 +1,7 @@
 body {
     width: 80%;
     margin: auto;
+    background-color: aliceblue;
 }
 
 .hidden {
@@ -14,4 +15,14 @@ body {
 #intro {
     width: 60%;
     border: 3px solid lightpink;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+#months {
+    display: flex;
+    gap: 10px;
 }
