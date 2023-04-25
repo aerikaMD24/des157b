@@ -1,0 +1,288 @@
+[{
+	"year" : "2016",
+    "month" : "Jan",
+    "count" : 1,
+    "collab" : false,
+    "collabPercent" : null,
+    "mood" : 1
+},
+{
+	"year" : "2016",
+    "month" : "Feb",
+    "count" : 0,
+    "collab" : null,
+    "collabPercent" : null,
+    "mood" : null
+},
+{
+	"year" : "2016",
+    "month" : "Mar",
+    "count" : 5,
+    "collab" : true,
+    "collabPercent" : 0.2,
+    "mood" : 1
+},
+{
+	"year" : "2016",
+    "month" : "Apr",
+    "count" : 1,
+    "collab" : false,
+    "collabPercent" : null,
+    "mood" : 1
+},
+{
+	"year" : "2016",
+    "month" : "May",
+    "count" : 0,
+    "collab" : null,
+    "collabPercent" : null,
+    "mood" : null
+},
+{
+	"year" : "2016",
+    "month" : "Jun",
+    "count" : 0,
+    "collab" : null,
+    "collabPercent" : null,
+    "mood" : null
+},
+{
+	"year" : "2016",
+    "month" : "Jul",
+    "count" : 8,
+    "collab" : true,
+    "collabPercent" : 0.13,
+    "mood" : 1
+},
+{
+	"year" : "2016",
+    "month" : "Aug",
+    "count" : 2,
+    "collab" : true,
+    "collabPercent" : 1,
+    "mood" : 1
+},
+{
+	"year" : "2016",
+    "month" : "Sep",
+    "count" : 9,
+    "collab" : true,
+    "collabPercent" : 0.11,
+    "mood" : 1
+},
+{
+	"year" : "2016",
+    "month" : "Oct",
+    "count" : 2,
+    "collab" : true,
+    "collabPercent" : 0.5,
+    "mood" : 1
+},
+{
+	"year" : "2016",
+    "month" : "Nov",
+    "count" : 0,
+    "collab" : null,
+    "collabPercent" : null,
+    "mood" : null
+},
+{
+	"year" : "2016",
+    "month" : "Dec",
+    "count" : 3,
+    "collab" : true,
+    "collabPercent" : 1,
+    "mood" : 1
+},
+{
+	"year" : "2017",
+    "month" : "Jan",
+    "count" : 1,
+    "collab" : false,
+    "collabPercent" : null,
+    "mood" : 1
+},
+{
+	"year" : "2017",
+    "month" : "Feb",
+    "count" : 8,
+    "collab" : true,
+    "collabPercent" : 0.63,
+    "mood" : 1
+},
+{
+	"year" : "2017",
+    "month" : "Mar",
+    "count" : 2,
+    "collab" : false,
+    "collabPercent" : null,
+    "mood" : 1
+},
+{
+	"year" : "2017",
+    "month" : "Apr",
+    "count" : 2,
+    "collab" : false,
+    "collabPercent" : null,
+    "mood" : 1
+},
+{
+	"year" : "2017",
+    "month" : "May",
+    "count" : 0,
+    "collab" : null,
+    "collabPercent" : null,
+    "mood" : null
+},
+{
+	"year" : "2017",
+    "month" : "Jun",
+    "count" : 0,
+    "collab" : null,
+    "collabPercent" : null,
+    "mood" : null
+},
+{
+	"year" : "2017",
+    "month" : "Jul",
+    "count" : 1,
+    "collab" : false,
+    "collabPercent" : null,
+    "mood" : 1
+},
+{
+	"year" : "2017",
+    "month" : "Aug",
+    "count" : 0,
+    "collab" : null,
+    "collabPercent" : null,
+    "mood" : null
+},
+{
+	"year" : "2017",
+    "month" : "Sep",
+    "count" : 0,
+    "collab" : null,
+    "collabPercent" : null,
+    "mood" : null
+},
+{
+	"year" : "2017",
+    "month" : "Oct",
+    "count" : 3,
+    "collab" : false,
+    "collabPercent" : null,
+    "mood" : 1
+},
+{
+	"year" : "2017",
+    "month" : "Nov",
+    "count" : 6,
+    "collab" : false,
+    "collabPercent" : null,
+    "mood" : 1
+},
+{
+	"year" : "2017",
+    "month" : "Dec",
+    "count" : 3,
+    "collab" : false,
+    "collabPercent" : null,
+    "mood" : 1
+},
+{
+	"year" : "2018",
+    "month" : "Jan",
+    "count" : 2,
+    "collab" : false,
+    "collabPercent" : null,
+    "mood" : 1
+},
+{
+	"year" : "2018",
+    "month" : "Feb",
+    "count" : 22,
+    "collab" : true,
+    "collabPercent" : 0.23,
+    "mood" : 1
+},
+{
+	"year" : "2018",
+    "month" : "Mar",
+    "count" : 7,
+    "collab" : false,
+    "collabPercent" : null,
+    "mood" : 1
+},
+{
+	"year" : "2018",
+    "month" : "Apr",
+    "count" : 4,
+    "collab" : false,
+    "collabPercent" : null,
+    "mood" : 1
+},
+{
+	"year" : "2018",
+    "month" : "May",
+    "count" : 0,
+    "collab" : null,
+    "collabPercent" : null,
+    "mood" : null
+},
+{
+	"year" : "2018",
+    "month" : "Jun",
+    "count" : 1,
+    "collab" : false,
+    "collabPercent" : null,
+    "mood" : 1
+},
+{
+	"year" : "2018",
+    "month" : "Jul",
+    "count" : 0,
+    "collab" : null,
+    "collabPercent" : null,
+    "mood" : null
+},
+{
+	"year" : "2018",
+    "month" : "Aug",
+    "count" : 1,
+    "collab" : false,
+    "collabPercent" : 0.5,
+    "mood" : 1
+},
+{
+	"year" : "2018",
+    "month" : "Sep",
+    "count" : 4,
+    "collab" : true,
+    "collabPercent" : 0.25,
+    "mood" : 1
+},
+{
+	"year" : "2018",
+    "month" : "Oct",
+    "count" : 0,
+    "collab" : null,
+    "collabPercent" : null,
+    "mood" : null
+},
+{
+	"year" : "2018",
+    "month" : "Nov",
+    "count" : 2,
+    "collab" : true,
+    "collabPercent" : 1,
+    "mood" : 1
+},
+{
+	"year" : "2018",
+    "month" : "Dec",
+    "count" : 0,
+    "collab" : null,
+    "collabPercent" : null,
+    "mood" : null
+}]
