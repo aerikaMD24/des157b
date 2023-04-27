@@ -10,14 +10,22 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    width: 60%;
+    margin: auto;
+    padding-bottom: 2%;
+}
+
 img {
     display: block;
     margin: auto;
+    padding-bottom: 2%;
 }
 
 figcaption {
     width: 60%;
     margin: auto;
+    padding: 1%;
     text-align: right;
     font-style: italic;
     color: #b46d26 ;
@@ -26,5 +34,13 @@ figcaption {
 p {
     width: 60%;
     margin: auto;
-    line-height: 1.5em;;
+    line-height: 1.5em;
+}
+
+section {
+    padding: 2%;
+}
+
+a {
+    color: #b46d26;
 }

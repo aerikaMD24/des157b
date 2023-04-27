@@ -111,7 +111,8 @@ main section h3 {
     border: 5px #C24CEB dotted;
 }
 
-.punkPop main section nav ul li a:visited  {
+
+.punkPop main section nav ul li a, .punkPop main section nav ul li a:visited  {
     color: white;
  }
 

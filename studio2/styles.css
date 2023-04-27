@@ -1,5 +1,5 @@
 body {
-    width: 80%;
+    width: 90%;
     margin: auto;
     background-color: aliceblue;
 }
@@ -18,11 +18,52 @@ body {
 }
 
 img {
-    display: block;
-    margin: auto;
+    position: absolute;
+    bottom: 0;
+    left: 70%;
+    transform: translate(-50%);
+    /* animation: write ease-in-out 1.33s infinite alternate; */
 }
 
-#months {
+@keyframes write {
+    10% {
+        bottom: 2%;
+    }
+    25% {
+        bottom: 0;
+    }
+    45% {
+        bottom: 4%;
+    }
+    50% {
+        left: 30%;
+        bottom: 1%;
+    }
+    55% {
+        bottom: 3%;
+    }
+    70% {
+        bottom: 0;
+    }   
+    85% {
+        bottom: 6%;
+    }
+    90% {
+        bottom: 2%;
+    }
+    100% {
+        left: 70%;
+        bottom: 0;
+    }
+    
+}
+
+.showMonths {
     display: flex;
-    gap: 10px;
+    gap: 70px;
+}
+
+.showMonths div {
+    display: flex;
+    flex-direction: column;
 }
