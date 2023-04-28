@@ -8,35 +8,44 @@
     const months18 = document.querySelector('#months18');
     const allMonths = document.querySelectorAll('input');
 
-    async function getPoemNo(index){
+    async function getData(){
         const myPoems = await fetch('data/data.json');
         const data = await myPoems.json();
-        console.log(data[index])
-        return data[index]
+        changeSpeed(data);
+        
     }
 
-    console.log(getPoemNo(7));
+    getData();
 
-    // const pls = getPoemNo(7);
-    // console.log(pls)
 
     console.log(allMonths);
-    
-    allMonths.forEach(function(eachMonth){
-        console.log('tets')
-        eachMonth.addEventListener('click', function(){
-            if (eachMonth.checked === true) {
-                console.log(eachMonth);
-                for (let i = 0; i < allMonths.length; i++) {
-                    if (allMonths[i] === eachMonth) {
-                        const data = getPoemNo(i);
-                        console.log(data)
-                    }
+
+    function changeSpeed(data) {
+        allMonths.forEach(function(eachMonth){
+            eachMonth.addEventListener('click', function(){
+                if (eachMonth.checked === true) {
+                    data.forEach(function(eachPoint){
+                        if (eachMonth.id === eachPoint.date) {
+                            console.log(eachPoint.count)
+                            let speed;
+                            if (eachPoint.count === 0) {
+                                speed = 0;
+                            } else {
+                                speed = 10 / eachPoint.count;
+                            }
+                            console.log(speed);
+                            document.querySelector('img').style.animationDuration = '1s';
+                            document.querySelector('img').style.animationDuration = speed +'s';
+                        };
+                    })
+                    
                 }
-            }
+            })
+            
         })
-        
-    })
+    }
+    
+    
 
     pickYear.addEventListener('change', function(){
         const year = this.value;

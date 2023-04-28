@@ -1,286 +1,250 @@
 [{
-	"year" : "2016",
-    "month" : "Jan",
+    "date" : "jan2016",
     "count" : 1,
     "collab" : false,
     "collabPercent" : null,
     "mood" : 1
 },
 {
-	"year" : "2016",
-    "month" : "Feb",
+	"date" : "feb2016",
     "count" : 0,
     "collab" : null,
     "collabPercent" : null,
     "mood" : null
 },
 {
-	"year" : "2016",
-    "month" : "Mar",
+	"date" : "mar2016",
     "count" : 5,
     "collab" : true,
     "collabPercent" : 0.2,
     "mood" : 1
 },
 {
-	"year" : "2016",
-    "month" : "Apr",
+	"date" : "apr2016",
     "count" : 1,
     "collab" : false,
     "collabPercent" : null,
     "mood" : 1
 },
 {
-	"year" : "2016",
-    "month" : "May",
+	"date" : "may2016",
     "count" : 0,
     "collab" : null,
     "collabPercent" : null,
     "mood" : null
 },
 {
-	"year" : "2016",
-    "month" : "Jun",
+	"date" : "jun2016",
     "count" : 0,
     "collab" : null,
     "collabPercent" : null,
     "mood" : null
 },
 {
-	"year" : "2016",
-    "month" : "Jul",
+	"date" : "jul2016",
     "count" : 8,
     "collab" : true,
     "collabPercent" : 0.13,
     "mood" : 1
 },
 {
-	"year" : "2016",
-    "month" : "Aug",
+	"date" : "aug2016",
     "count" : 2,
     "collab" : true,
     "collabPercent" : 1,
     "mood" : 1
 },
 {
-	"year" : "2016",
-    "month" : "Sep",
+	"date" : "sep2016",
     "count" : 9,
     "collab" : true,
     "collabPercent" : 0.11,
     "mood" : 1
 },
 {
-	"year" : "2016",
-    "month" : "Oct",
+    "date" : "oct2016",
     "count" : 2,
     "collab" : true,
     "collabPercent" : 0.5,
     "mood" : 1
 },
 {
-	"year" : "2016",
-    "month" : "Nov",
+	"date" : "nov2016",
     "count" : 0,
     "collab" : null,
     "collabPercent" : null,
     "mood" : null
 },
 {
-	"year" : "2016",
-    "month" : "Dec",
+	"date" : "dec2016",
     "count" : 3,
     "collab" : true,
     "collabPercent" : 1,
     "mood" : 1
 },
 {
-	"year" : "2017",
-    "month" : "Jan",
+    "date" : "jan2017",
     "count" : 1,
     "collab" : false,
     "collabPercent" : null,
     "mood" : 1
 },
 {
-	"year" : "2017",
-    "month" : "Feb",
+    "date" : "feb2017",
     "count" : 8,
     "collab" : true,
     "collabPercent" : 0.63,
     "mood" : 1
 },
 {
-	"year" : "2017",
-    "month" : "Mar",
+	"date" : "mar2017",
     "count" : 2,
     "collab" : false,
     "collabPercent" : null,
     "mood" : 1
 },
 {
-	"year" : "2017",
-    "month" : "Apr",
+	"date" : "apr2017",
     "count" : 2,
     "collab" : false,
     "collabPercent" : null,
     "mood" : 1
 },
 {
-	"year" : "2017",
-    "month" : "May",
+	"date" : "may2017",
     "count" : 0,
     "collab" : null,
     "collabPercent" : null,
     "mood" : null
 },
 {
-	"year" : "2017",
-    "month" : "Jun",
+	"date" : "jun2017",
     "count" : 0,
     "collab" : null,
     "collabPercent" : null,
     "mood" : null
 },
 {
-	"year" : "2017",
-    "month" : "Jul",
+	"date" : "jul2017",
     "count" : 1,
     "collab" : false,
     "collabPercent" : null,
     "mood" : 1
 },
 {
-	"year" : "2017",
-    "month" : "Aug",
+	"date" : "aug2017",
     "count" : 0,
     "collab" : null,
     "collabPercent" : null,
     "mood" : null
 },
 {
-	"year" : "2017",
-    "month" : "Sep",
+	"date" : "sep2017",
     "count" : 0,
     "collab" : null,
     "collabPercent" : null,
     "mood" : null
 },
 {
-	"year" : "2017",
-    "month" : "Oct",
+	"date" : "oct2017",
     "count" : 3,
     "collab" : false,
     "collabPercent" : null,
     "mood" : 1
 },
 {
-	"year" : "2017",
-    "month" : "Nov",
+	"date" : "nov2017",
     "count" : 6,
     "collab" : false,
     "collabPercent" : null,
     "mood" : 1
 },
 {
-	"year" : "2017",
-    "month" : "Dec",
+	"date" : "dec2017",
     "count" : 3,
     "collab" : false,
     "collabPercent" : null,
     "mood" : 1
 },
 {
-	"year" : "2018",
-    "month" : "Jan",
+	"date" : "jan2018",
     "count" : 2,
     "collab" : false,
     "collabPercent" : null,
     "mood" : 1
 },
 {
-	"year" : "2018",
-    "month" : "Feb",
+    "date" : "feb2018",
     "count" : 22,
     "collab" : true,
     "collabPercent" : 0.23,
     "mood" : 1
 },
 {
-	"year" : "2018",
-    "month" : "Mar",
+	"date" : "mar2018",
     "count" : 7,
     "collab" : false,
     "collabPercent" : null,
     "mood" : 1
 },
 {
-	"year" : "2018",
-    "month" : "Apr",
+	"date" : "apr2018",
     "count" : 4,
     "collab" : false,
     "collabPercent" : null,
     "mood" : 1
 },
 {
-	"year" : "2018",
-    "month" : "May",
+	"date" : "may2018",
     "count" : 0,
     "collab" : null,
     "collabPercent" : null,
     "mood" : null
 },
 {
-	"year" : "2018",
-    "month" : "Jun",
+	"date" : "jun2018",
     "count" : 1,
     "collab" : false,
     "collabPercent" : null,
     "mood" : 1
 },
 {
-	"year" : "2018",
-    "month" : "Jul",
+	"date" : "jul2018",
     "count" : 0,
     "collab" : null,
     "collabPercent" : null,
     "mood" : null
 },
 {
-	"year" : "2018",
-    "month" : "Aug",
+	"date" : "aug2018",
     "count" : 1,
     "collab" : false,
     "collabPercent" : 0.5,
     "mood" : 1
 },
 {
-	"year" : "2018",
-    "month" : "Sep",
+	"date" : "sep2018",
     "count" : 4,
     "collab" : true,
     "collabPercent" : 0.25,
     "mood" : 1
 },
 {
-	"year" : "2018",
-    "month" : "Oct",
+	"date" : "oct2018",
     "count" : 0,
     "collab" : null,
     "collabPercent" : null,
     "mood" : null
 },
 {
-	"year" : "2018",
-    "month" : "Nov",
+	"date" : "nov2018",
     "count" : 2,
     "collab" : true,
     "collabPercent" : 1,
     "mood" : 1
 },
 {
-	"year" : "2018",
-    "month" : "Dec",
+	"date" : "dec2018",
     "count" : 0,
     "collab" : null,
     "collabPercent" : null,
