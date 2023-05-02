@@ -21,172 +21,188 @@
         3 Years... 100 Poems
     </h1>
 
-    <section id="intro" class="hidden">
-        <h2>Welcome, readers!</h2>
-        <p>As a child, I'd been in love with words. From playing with wordplay to assonace to my absolute favorite: rhymes. I'd written poems basically all my life.</p>
-        <p>Yet something must have really hit me in my teen years because from ages 14-16 I found myseelf writing dozens of poem! For 3 years, 2016-2018, I'd managed to create 100 poems.</p>
-        <p>That's a lot, I know. So here's a little visualizer to help you!</p>
-        <button>Let's Go</button>
+    <section id="intro" class="showing">
+        <div>
+            <h2>Welcome, readers!</h2>
+            <p>As a child, I'd been in love with words. From playing with wordplay to assonace to my absolute favorite: rhymes. I'd written poems basically all my life.</p>
+            <p>Yet something must have really hit me in my teen years because from ages 14-16 I found myself writing dozens of poem! For 3 years (2016-2018), I'd somehow managed to write 100 poems.</p>
+            <p>That's a lot, I know. So here's a little visualizer to help you imagine that!</p>
+            <button>Let's Go</button>
+        </div>
     </section>
+    
 
-    <select name="years" id="years">
-        <option value="sixteen">2016</option>
-        <option value="seventeen">2017</option>
-        <option value="eighteen">2018</option>
-    </select>
+    <div id="calendar">
+        <select name="years" id="years">
+            <option value="sixteen">2016</option>
+            <option value="seventeen">2017</option>
+            <option value="eighteen">2018</option>
+        </select>
 
-    <form id="months16" class="showMonths">
-        <div>
-            <label for="jan2016">Jan16</label>
-            <input type="radio" id="jan2016" class="radio" name="months16" value="Jan">
-        </div>
-        <div>
-            <label for="feb2016">Feb</label>
-            <input type="radio" id="feb2016" class="radio" name="months16" value="Feb">
-        </div>
-        <div>
-            <label for="mar2016">Mar</label>
-            <input type="radio" id="mar2016" class="radio" name="months16" value="Mar">
-        </div>
-        <div>
-            <label for="apr2016">Apr</label>
-            <input type="radio" id="apr2016" name="months16" value="Apr">
-        </div>
-        <div>
-            <label for="may2016">May</label>
-            <input type="radio" id="may2016" name="months16" value="May">
-        </div>
-        <div>
-            <label for="jun2016">Jun</label>
-            <input type="radio" id="jun2016" name="months16" value="Jun">
-        </div>
-        <div>
-            <label for="jul2016">Jul</label>
-            <input type="radio" id="jul2016" name="months16" value="Jul">
-        </div>
-        <div>
-            <label for="aug2016">Aug</label>
-            <input type="radio" id="aug2016" name="months16" value="Aug">
-        </div>
-        <div>
-            <label for="sep2016">Sep</label>
-            <input type="radio" id="sep2016" name="months16" value="Sep">
-        </div>
-        <div>
-            <label for="oct2016">Oct</label>
-            <input type="radio" id="oct2016" name="months16" value="Oct">
-        </div>
-        <div>
-            <label for="nov2016">Nov</label>
-            <input type="radio" id="nov2016" name="months16" value="Nov">
-        </div>
-        <div>
-            <label for="dec2016">Dec</label>
-            <input type="radio" id="dec2016" name="months16" value="Dec">
-        </div> 
-    </form>
+        <form id="months16" class="showMonths">
+            <div>
+                <label for="jan2016">jan16</label>
+                <input type="radio" id="jan2016" class="radio" name="months16" value="jan">
+            </div>
+            <div>
+                <label for="feb2016">feb</label>
+                <input type="radio" id="feb2016" class="radio" name="months16" value="feb">
+            </div>
+            <div>
+                <label for="mar2016">mar</label>
+                <input type="radio" id="mar2016" class="radio" name="months16" value="mar">
+            </div>
+            <div>
+                <label for="apr2016">apr</label>
+                <input type="radio" id="apr2016" name="months16" value="apr">
+            </div>
+            <div>
+                <label for="may2016">may</label>
+                <input type="radio" id="may2016" name="months16" value="may">
+            </div>
+            <div>
+                <label for="jun2016">jun</label>
+                <input type="radio" id="jun2016" name="months16" value="jun">
+            </div>
+            <div>
+                <label for="jul2016">jul</label>
+                <input type="radio" id="jul2016" name="months16" value="jul">
+            </div>
+            <div>
+                <label for="aug2016">aug</label>
+                <input type="radio" id="aug2016" name="months16" value="aug">
+            </div>
+            <div>
+                <label for="sep2016">sep</label>
+                <input type="radio" id="sep2016" name="months16" value="sep">
+            </div>
+            <div>
+                <label for="oct2016">oct</label>
+                <input type="radio" id="oct2016" name="months16" value="oct">
+            </div>
+            <div>
+                <label for="nov2016">nov</label>
+                <input type="radio" id="nov2016" name="months16" value="nov">
+            </div>
+            <div>
+                <label for="dec2016">dec</label>
+                <input type="radio" id="dec2016" name="months16" value="dec">
+            </div> 
+        </form>
+    
+        <form id="months17" class="hidden">
+            <div>
+                <label for="jan2017">jan17</label>
+                <input type="radio" id="jan2017" name="months17" value="jan">
+            </div>
+            <div>
+                <label for="feb2017">feb</label>
+                <input type="radio" id="feb2017" name="months17" value="feb">
+            </div>
+            <div>
+                <label for="mar2017">mar</label>
+                <input type="radio" id="mar2017" name="months17" value="mar">
+            </div>
+            <div>
+                <label for="apr2017">apr</label>
+                <input type="radio" id="apr2017" name="months17" value="apr">
+            </div>
+            <div>
+                <label for="may2017">may</label>
+                <input type="radio" id="may2017" name="months17" value="may">
+            </div>
+            <div>
+                <label for="jun2017">jun</label>
+                <input type="radio" id="jun2017" name="months17" value="jun">
+            </div>
+            <div>
+                <label for="jul2017">jul</label>
+                <input type="radio" id="jul2017" name="months17" value="jul">
+            </div>
+            <div>
+                <label for="aug2017">aug</label>
+                <input type="radio" id="aug2017" name="months17" value="aug">
+            </div>
+            <div>
+                <label for="sep2017">sep</label>
+                <input type="radio" id="sep2017" name="months17" value="sep">
+            </div>
+            <div>
+                <label for="oct2017">oct</label>
+                <input type="radio" id="oct2017" name="months17" value="oct">
+            </div>
+            <div>
+                <label for="nov2017">nov</label>
+                <input type="radio" id="nov2017" name="months17" value="nov">
+            </div>
+            <div>
+                <label for="dec2017">dec</label>
+                <input type="radio" id="dec2017" name="months17" value="dec">
+            </div> 
+        </form>
+    
+        <form id="months18" class="hidden">
+            <div>
+                <label for="jan2018">jan18</label>
+                <input type="radio" id="jan2018" name="months18" value="jan">
+            </div>
+            <div>
+                <label for="feb2018">feb</label>
+                <input type="radio" id="feb2018" name="months18" value="feb">
+            </div>
+            <div>
+                <label for="mar2018">mar</label>
+                <input type="radio" id="mar2018" name="months18" value="mar">
+            </div>
+            <div>
+                <label for="apr2018">apr</label>
+                <input type="radio" id="apr2018" name="months18" value="apr">
+            </div>
+            <div>
+                <label for="may2018">may</label>
+                <input type="radio" id="may2018" name="months18" value="may">
+            </div>
+            <div>
+                <label for="jun2018">jun</label>
+                <input type="radio" id="jun2018" name="months18" value="jun">
+            </div>
+            <div>
+                <label for="jul2018">jul</label>
+                <input type="radio" id="jul2018" name="months18" value="jul">
+            </div>
+            <div>
+                <label for="aug2018">aug</label>
+                <input type="radio" id="aug2018" name="months18" value="aug">
+            </div>
+            <div>
+                <label for="sep2018">sep</label>
+                <input type="radio" id="sep2018" name="months18" value="sep">
+            </div>
+            <div>
+                <label for="oct2018">oct</label>
+                <input type="radio" id="oct2018" name="months18" value="oct">
+            </div>
+            <div>
+                <label for="nov2018">nov</label>
+                <input type="radio" id="nov2018" class="radio" name="months18" value="nov">
+            </div>
+            <div>
+                <label for="dec2018">dec</label>
+                <input type="radio" id="dec2018" name="months18" value="dec">
+            </div> 
+        </form>
 
-    <form id="months17" class="hidden">
-        <div>
-            <label for="jan2017">Jan17</label>
-            <input type="radio" id="jan2017" name="months17" value="Jan">
-        </div>
-        <div>
-            <label for="feb2017">Feb</label>
-            <input type="radio" id="feb2017" name="months17" value="Feb">
-        </div>
-        <div>
-            <label for="mar2017">Mar</label>
-            <input type="radio" id="mar2017" name="months17" value="Mar">
-        </div>
-        <div>
-            <label for="apr2017">Apr</label>
-            <input type="radio" id="apr2017" name="months17" value="Apr">
-        </div>
-        <div>
-            <label for="may2017">May</label>
-            <input type="radio" id="may2017" name="months17" value="May">
-        </div>
-        <div>
-            <label for="jun2017">Jun</label>
-            <input type="radio" id="jun2017" name="months17" value="Jun">
-        </div>
-        <div>
-            <label for="jul2017">Jul</label>
-            <input type="radio" id="jul2017" name="months17" value="Jul">
-        </div>
-        <div>
-            <label for="aug2017">Aug</label>
-            <input type="radio" id="augv17" name="months17" value="Aug">
-        </div>
-        <div>
-            <label for="sep2017">Sep</label>
-            <input type="radio" id="sep2017" name="months17" value="Sep">
-        </div>
-        <div>
-            <label for="oct2017">Oct</label>
-            <input type="radio" id="oct2017" name="months17" value="Oct">
-        </div>
-        <div>
-            <label for="nov2017">Nov</label>
-            <input type="radio" id="nov2017" name="months17" value="Nov">
-        </div>
-        <div>
-            <label for="dec2017">Dec</label>
-            <input type="radio" id="dec2017" name="months17" value="Dec">
-        </div> 
-    </form>
+    </div>
+    
+    <div id="paper">
+        <p id="stat">1 poem</p>
+        <p id="keyword1">trait 1</p>
+        <p id="keyword2">trait 2</p>
+        <p id="keyword3">trait 3</p>
+    </div>
+    
 
-    <form id="months18" class="hidden">
-        <div>
-            <label for="jan2018">Jan18</label>
-            <input type="radio" id="jan2018" name="months18" value="Jan">
-        </div>
-        <div>
-            <label for="feb2018">Feb</label>
-            <input type="radio" id="feb2018" name="months18" value="Feb">
-        </div>
-        <div>
-            <label for="mar2018">Mar</label>
-            <input type="radio" id="mar2018" name="months18" value="Mar">
-        </div>
-        <div>
-            <label for="apr2018">Apr</label>
-            <input type="radio" id="apr2018" name="months18" value="Apr">
-        </div>
-        <div>
-            <label for="may2018">May</label>
-            <input type="radio" id="may2018" name="months18" value="May">
-        </div>
-        <div>
-            <label for="jun2018">Jun</label>
-            <input type="radio" id="jun2018" name="months18" value="Jun">
-        </div>
-        <div>
-            <label for="jul18">Jul</label>
-            <input type="radio" id="jul18" name="months18" value="Jul">
-        </div>
-        <div>
-            <label for="aug2018">Aug</label>
-            <input type="radio" id="aug2018" name="months18" value="Aug">
-        </div>
-        <div>
-            <label for="sep2018">Sep</label>
-            <input type="radio" id="sep2018" name="months18" value="Sep">
-        </div>
-        <div>
-            <label for="oct2018">Oct</label>
-            <input type="radio" id="oct2018" name="months18" value="Oct">
-        </div>
-        <div>
-            <label for="nov2018">Nov</label>
-            <input type="radio" id="nov2018" class="radio" name="months18" value="Nov">
-        </div>
-        <div>
-            <label for="dec2018">Dec</label>
-            <input type="radio" id="dec2018" name="months18" value="Dec">
-        </div> 
-    </form>
+
 
     <div id="rec">
         <img src="images/handwrite.png" alt="An arm in the midst of wrting">

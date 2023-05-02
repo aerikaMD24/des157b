@@ -1,252 +1,181 @@
 [{
     "date" : "jan2016",
     "count" : 1,
-    "collab" : false,
-    "collabPercent" : null,
-    "mood" : 1
+    "keywords" : ["pantoum", "adventure", "competition winner"]
+    
 },
 {
 	"date" : "feb2016",
     "count" : 0,
-    "collab" : null,
-    "collabPercent" : null,
-    "mood" : null
+    "keywords" : null
 },
 {
 	"date" : "mar2016",
     "count" : 5,
-    "collab" : true,
-    "collabPercent" : 0.2,
-    "mood" : 1
+    "keywords" : ["love", "duality", "sadness"]
 },
 {
 	"date" : "apr2016",
     "count" : 1,
-    "collab" : false,
-    "collabPercent" : null,
-    "mood" : 1
+    "keywords" : ["lacking", "insecurity", "talentless"]
 },
 {
 	"date" : "may2016",
     "count" : 0,
-    "collab" : null,
-    "collabPercent" : null,
-    "mood" : null
+    "keywords" : null
 },
 {
 	"date" : "jun2016",
     "count" : 0,
-    "collab" : null,
-    "collabPercent" : null,
-    "mood" : null
+    "keywords" : null
 },
 {
 	"date" : "jul2016",
     "count" : 8,
-    "collab" : true,
-    "collabPercent" : 0.13,
-    "mood" : 1
+    "keywords" : ["help", "duality", "old love"]
 },
 {
 	"date" : "aug2016",
     "count" : 2,
-    "collab" : true,
-    "collabPercent" : 1,
-    "mood" : 1
+    "keywords" : ["funny", "anniversary", "connection"]
 },
 {
 	"date" : "sep2016",
     "count" : 9,
-    "collab" : true,
-    "collabPercent" : 0.11,
-    "mood" : 1
+    "keywords" : ["not love", "fighting", "procrastination"]
 },
 {
     "date" : "oct2016",
     "count" : 2,
-    "collab" : true,
-    "collabPercent" : 0.5,
-    "mood" : 1
+    "keywords" : ["sky", "wonder", "city girl"]
 },
 {
 	"date" : "nov2016",
     "count" : 0,
-    "collab" : null,
-    "collabPercent" : null,
-    "mood" : null
+    "keywords" : null
 },
 {
 	"date" : "dec2016",
     "count" : 3,
-    "collab" : true,
-    "collabPercent" : 1,
-    "mood" : 1
+    "keywords" : ["narrative", "2016", "collab w/ mare"]
 },
 {
     "date" : "jan2017",
     "count" : 1,
-    "collab" : false,
-    "collabPercent" : null,
-    "mood" : 1
+    "keywords" : ["liar", "insecurity", "new year's resolution"]
 },
 {
     "date" : "feb2017",
     "count" : 8,
-    "collab" : true,
-    "collabPercent" : 0.63,
-    "mood" : 1
+    "keywords" : ["collab w/ mare", "thoughts", "procrastination"]
 },
 {
 	"date" : "mar2017",
     "count" : 2,
-    "collab" : false,
-    "collabPercent" : null,
-    "mood" : 1
+    "keywords" : ["history", "procrastination", "new year's resolution"]
 },
 {
 	"date" : "apr2017",
     "count" : 2,
-    "collab" : false,
-    "collabPercent" : null,
-    "mood" : 1
+    "keywords" : ["reunion", "sadness", "hope"]
 },
 {
 	"date" : "may2017",
     "count" : 0,
-    "collab" : null,
-    "collabPercent" : null,
-    "mood" : null
+    "keywords" : null
 },
 {
 	"date" : "jun2017",
     "count" : 0,
-    "collab" : null,
-    "collabPercent" : null,
-    "mood" : null
+    "keywords" : null
 },
 {
 	"date" : "jul2017",
     "count" : 1,
-    "collab" : false,
-    "collabPercent" : null,
-    "mood" : 1
+    "keywords" : ["narrative", "action", "unreliable narrator"]
 },
 {
 	"date" : "aug2017",
     "count" : 0,
-    "collab" : null,
-    "collabPercent" : null,
-    "mood" : null
+    "keywords" : null
 },
 {
 	"date" : "sep2017",
     "count" : 0,
-    "collab" : null,
-    "collabPercent" : null,
-    "mood" : null
+    "keywords" : null
 },
 {
 	"date" : "oct2017",
     "count" : 3,
-    "collab" : false,
-    "collabPercent" : null,
-    "mood" : 1
+    "keywords" : ["war", "freedom?", "need comfort"]
 },
 {
 	"date" : "nov2017",
     "count" : 6,
-    "collab" : false,
-    "collabPercent" : null,
-    "mood" : 1
+    "keywords" : ["change", "self-image", "bitterness"]
 },
 {
 	"date" : "dec2017",
     "count" : 3,
-    "collab" : false,
-    "collabPercent" : null,
-    "mood" : 1
+    "keywords" : ["ego", "moral", "'special'"]
 },
 {
 	"date" : "jan2018",
     "count" : 2,
-    "collab" : false,
-    "collabPercent" : null,
-    "mood" : 1
+    "keywords" : ["self-worth", "procrastination", "new year's resolution"]
 },
 {
     "date" : "feb2018",
     "count" : 22,
-    "collab" : true,
-    "collabPercent" : 0.23,
-    "mood" : 1
+    "keywords" : ["so many", "variety", "collab w/ mare"]
 },
 {
 	"date" : "mar2018",
     "count" : 7,
-    "collab" : false,
-    "collabPercent" : null,
-    "mood" : 1
+    "keywords" : ["moral", "life", "fighting"]
 },
 {
 	"date" : "apr2018",
     "count" : 4,
-    "collab" : false,
-    "collabPercent" : null,
-    "mood" : 1
+    "keywords" : ["sadness", "farewell", "procrastination"]
 },
 {
 	"date" : "may2018",
     "count" : 0,
-    "collab" : null,
-    "collabPercent" : null,
-    "mood" : null
+    "keywords" : null
 },
 {
 	"date" : "jun2018",
     "count" : 1,
-    "collab" : false,
-    "collabPercent" : null,
-    "mood" : 1
+    "keywords" : ["religious", "moral", "narrative"]
 },
 {
 	"date" : "jul2018",
     "count" : 0,
-    "collab" : null,
-    "collabPercent" : null,
-    "mood" : null
+    "keywords" : null
 },
 {
 	"date" : "aug2018",
     "count" : 1,
-    "collab" : false,
-    "collabPercent" : 0.5,
-    "mood" : 1
+    "keywords" : ["spark", "change", "self-worth"]
 },
 {
 	"date" : "sep2018",
     "count" : 4,
-    "collab" : true,
-    "collabPercent" : 0.25,
-    "mood" : 1
+    "keywords" : ["history", "change", "collab w/ mare"]
 },
 {
 	"date" : "oct2018",
     "count" : 0,
-    "collab" : null,
-    "collabPercent" : null,
-    "mood" : null
+    "keywords" : null
 },
 {
 	"date" : "nov2018",
     "count" : 2,
-    "collab" : true,
-    "collabPercent" : 1,
-    "mood" : 1
+    "keywords" : ["change", "nostalgia", "collab w/ mare"]
 },
 {
 	"date" : "dec2018",
     "count" : 0,
-    "collab" : null,
-    "collabPercent" : null,
-    "mood" : null
+    "keywords" : null
 }]
