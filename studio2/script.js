@@ -10,6 +10,7 @@
 
     document.querySelector('button').addEventListener('click', function(){
         document.querySelector('#intro').className = 'hidden';
+        play();
     })
 
     pickYear.addEventListener('change', function(){
@@ -35,7 +36,7 @@
     async function getData(){
         const myPoems = await fetch('data/data.json');
         const data = await myPoems.json();
-        changeMonth(data)
+        changeMonth(data);
     }
 
     getData();
@@ -99,10 +100,16 @@
         
     }
 
-
-
-    // document.getElementById("mar17").checked = true;
+    function play() {
+        const dates = ["jan16", "feb16", "mar16", "apr16", "may16", "jun16", "jul16", "aug16", "sep16", "oct16", "nov16", "dec16", "jan17", "feb17", "mar17", "apr17", "may17", "jun17", "jul17", "aug17", "sep17", "oct17", "nov17", "dec17", "jan18", "feb18", "mar18", "apr18", "may18", "jun18", "jul18", "aug18", "sep18", "oct18", "nov18", "dec18"];
+        console.log('play')
+        for (let i = 0; i < dates.length; i++) {
+            setTimeout(function(){
+                console.log(`check ${dates[i]}`)
+                // document.querySelector(dates[i]).checked = true;
+            }, 1000)
+        }
+    }
     
-
     
 }())

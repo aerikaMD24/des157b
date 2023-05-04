@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100vh;
+    font-family: Barrio, Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: url("images/tucson.png");
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: antiquewhite;
+    overflow-x: hidden;
+}
+
+section:first-of-type {
+    height: 100vh;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 75vh;
+    font-size: 20vw;
+    opacity: .9;
+}
+
+
+/* so that the animation takes place higher in the viewport */
+
+section div {
+    padding-bottom: 3in;
+}
+
+.asterisk {
+    postion: absolute;
+    font-size: 20vw;
+}
+
+#roadrunner {
+    font-size: 15vw;
+}

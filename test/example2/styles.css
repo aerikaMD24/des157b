@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+body {
+    background-color: #222;
+}
+
+#mySketch {
+    width: 1366px;
+    margin: auto;
+}
