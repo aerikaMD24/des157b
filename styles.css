@@ -1,4 +1,4 @@
-/* general */
+/* GENERAL */
 
 body {
     max-width: 1200px;
@@ -61,7 +61,7 @@ main section h3 {
     
  }
 
- /* girlyPop Class */
+/* GIRLYPOP CLASS */
 
 .girlyPop  {
     background-color: #F9C7CA;
@@ -72,7 +72,7 @@ main section h3 {
 .girlyPop h1, .girlyPop h2, .girlyPop h3 {
     font-family: 'Playfair Display', serif;
     color: #EF6788;
-    /* background-color: #F6EBE9; */
+
 }
 
 .girlyPop main section {
@@ -81,6 +81,7 @@ main section h3 {
     box-shadow: inset 0px -1px 10px 6px rgba(240, 163, 168, 0.25);
 }
 
+.girlyPop main section nav ul li a, 
 .girlyPop main section nav ul li a:visited  {
     color: #EF6788;
  }
@@ -94,7 +95,7 @@ main section h3 {
     display: none;
  }
 
-  /* punkPop Class */
+/* PUNKPOP CLASS */
 
 .punkPop  {
     background-color: black;
@@ -112,7 +113,8 @@ main section h3 {
 }
 
 
-.punkPop main section nav ul li a, .punkPop main section nav ul li a:visited  {
+.punkPop main section nav ul li a, 
+.punkPop main section nav ul li a:visited  {
     color: white;
  }
 

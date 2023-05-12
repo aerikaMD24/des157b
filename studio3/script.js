@@ -21,11 +21,6 @@
     var marker = L.marker([38.5377, -121.7494]).addTo(map);
     marker.bindPopup("'Eye on Mrak' Egghead");
 
-
-
-
-
-
     // LOCAL STORAGE TEST RUN HERE
 
     // If no local storage data has been set, default to false
