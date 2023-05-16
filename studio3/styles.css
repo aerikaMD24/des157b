@@ -1,3 +1,21 @@
 #map { 
-    height: 80vh; 
+    height: 50vh; 
+}
+
+.gray {
+    filter: grayscale(100%);
+}
+
+.normal {
+    filter: grayscale(0);
+}
+
+#actions {
+    display: flex;
+}
+
+#storageBtns, #mappingBtns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

@@ -5,21 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--/ /-------- Normalize CSS --------/ /-->
+    <!--Normalize CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
 
-    <!--/ /-------- Leaflet CSS Library --------/ /-->
+    <!--Leaflet CSS Library -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
      crossorigin="">
-     <!--/ /-------- Styles CSS --------/ /-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css">
+
+    <!-- Styles CSS -->
     <link href="styles.css" rel="stylesheet">
 
-    <!--/ /-------- Leaflet JS Library --------/ /-->
+    <!-- Leaflet JS Library -->
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
      crossorigin=""></script>
-     <!--/ /-------- Script JS --------/ /-->
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+    <!-- Script JS -->
     <script src="script.js" defer></script>
     
     <title>Library Liberty</title>
@@ -27,6 +31,20 @@
 <body>
     <h1>Library Liberty</h1>
     <div id="map"></div>
-    <div>Pictures</div>
+    <div id="actions">
+        <div id="storageBtns">
+            <button id="local">Save Local Storage</button>
+            <button id="clear">Clear Local Storage</button>
+        </div>
+        <img id="mondavi" src="images/testMondavi.png" alt="test graphic for mondavi" class="gray">
+        <div id="mappingBtns">
+            <button id="drive">Route(Driving)</button>
+            <button id="walk">Route(Walking)</button>
+            <button id="reset">Reset Routing</button>
+            <button id="geo">Geolocate Me</button>
+        </div>
+        <p id="coords"></p>
+    </div>
+    
 </body>
 </html>
