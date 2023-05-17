@@ -38,7 +38,7 @@
         
     }) 
 
-    // LEAFLET OUTING MACHINE HERE
+    // LEAFLET ROUTING MACHINE HERE
 
     // Actual routing (driving)
     document.querySelector('#drive').addEventListener('click', function(){
