@@ -25,8 +25,9 @@
 
     <!-- Leaflet JS Library -->
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
-    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
-    crossorigin=""></script>
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
 
     <!-- Javascript -->
     <script src="script.js" defer></script>
@@ -34,6 +35,13 @@
 </head>
 <body>
     <div id="map"></div>
+
+    <!-- temp buttons -->
+    <button id="drive">drive</button>
+    <button id="walk">walk</button>
+    <button id="endd">end dr</button>
+    <button id="endw">end walk</button>
+    <button id="geo">geo</button>
 
     <!-- <div id = "contarea" class="container">
         
@@ -46,12 +54,12 @@
         </main>
     </div> -->
 
-    <div id="content">
+    <!-- <div id="content">
         <section id="intro">
             <img src="images/Hero.png" alt="Horizontal photo of Egghead at a glance">
             <div id="locate">
                 <h2>'Eye on Mrak' Egghead</h2>
-                <!-- <svg></svg> -->
+                 
             </div>
             <p>The upside-down head points away from the administration building, laughing. On the back of the head, a single eye stares at Mrak Hall.</p>
         </section>
@@ -74,7 +82,7 @@
             </ol>
         </section>
         
-    </div>
+    </div> -->
     
     <!-- <footer>
         <p>Made with <a href = "https://leafletjs.com/">Leaflet</a> and <a href = "https://michalsnik.github.io/aos/">Animate on Scroll</a> Libraries</p>
