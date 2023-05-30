@@ -33,25 +33,11 @@
     var marker = L.marker([38.5343, -121.7492], {icon: mondaviIcon}).addTo(map);
     marker.bindPopup('Mondavi Center');
 
-    var marker = L.marker([38.531, -121.76], {icon: greenIcon}).addTo(map);
+    var marker = L.marker([38.531, -121.76], {icon: mondaviIcon}).addTo(map);
     marker.bindPopup('Arboretum');
     
     var marker = L.marker([38.5377, -121.7494], {icon: eggIcon}).addTo(map);
     marker.bindPopup("'Eye on Mrak' Egghead"); 
-    
-
-
-
-
-
-    // const appleIcon = L.icon({
-    //     iconUrl: 'images/apple.png',
-    //     iconSize: [45, 45],
-    //     iconAnchor: [22, 94],
-    //     shadowAnchor: [4, 62],
-    //     popupAnchor: [-3, -76]
-    //   });
-    // L.marker([38.5467537, -121.7614973], { icon: appleIcon }).addTo(map);
     
     // Routing
     let walking;
@@ -91,21 +77,16 @@
         long: -121.40486
     }
 
-    // options = {
-    //     enableHighAccuracy: false,
-    //     timeout: 5000,
-    //     maximumAge: 0,
-    // }
-
     // ~~~
 
     function arrival() {
         id = navigator.geolocation.watchPosition(reach, error, options);
     }
 
-    arrival();
+    
 
     function route() {
+        arrival();
         
         // Walking directions using MAPBOX
         var wrouter = L.Routing.mapbox('pk.eyJ1IjoiYWRpbWFhbm8iLCJhIjoiY2xocWtmd2p1MGpyZTNxbjAxMTIxcXgzbCJ9.GmkYdI24OMR3rjHR_aPZHA', {
@@ -122,60 +103,122 @@
                 vehicle: 'car'
             }});
 
+        let thisRoute;
+        let mapbox;
+        if (walking == true) {
+            thisRoute = wrouter;
+            mapbox = 'mapbox/walking';
+        } else {
+            thisRoute = drouter;
+            mapbox = 'mapbox/driving';
+        }
+
         
 
         // If user allows geolocation...
         if ("geolocation" in navigator) {
 
             // Get geolocation 
-            navigator.geolocation.watchPosition((position) => {
-                let latitude = position.coords.latitude;
-                let longitude = position.coords.longitude;
+            // navigator.geolocation.watchPosition((position) => {
+            //     let latitude = position.coords.latitude;
+            //     let longitude = position.coords.longitude;
 
-                // test dynamic marker
-                L.marker([latitude, longitude], {icon: greenIcon}).addTo(map).bindPopup("YOU.");
 
-                // Walking route applied using LEAFBOX OUTING MACHINE
-                if (walking == true) {
-                    var routingWalk =  L.Routing.control({
-                        waypoints: [
-                            L.latLng(38.5377, -121.7494),
-                            L.latLng(latitude, longitude)
-                        ],
-                        router: wrouter,
-                        profile: 'mapbox/walking'
-                    }).addTo(map);
+            //     // Walking route applied using LEAFBOX OUTING MACHINE
+            //     if (walking == true) {
+            //         var routingWalk =  L.Routing.control({
+            //             waypoints: [
+            //                 L.latLng(38.5377, -121.7494),
+            //                 L.latLng(latitude, longitude)
+            //             ],
+            //             router: wrouter,
+            //             profile: 'mapbox/walking'
+            //         }).addTo(map);
 
-                    // Getting rid of route (when done?)
-                    document.querySelector('#endw').addEventListener('click', function(){
-                    map.removeControl(routingWalk);
-                    })
-                } else {
-                    // Driving route applied using LEAFBOX OUTING MACHINE
-                    var routingDrive =  L.Routing.control({
-                        waypoints: [
-                            L.latLng(38.5377, -121.7494),
-                            L.latLng(latitude, longitude)
-                        ],
-                        router: drouter,
-                        profile: 'mapbox/walking'
-                    }).addTo(map);
+            //         // Getting rid of route (when done?)
+            //         document.querySelector('#endw').addEventListener('click', function(){
+            //         map.removeControl(routingWalk);
+            //         })
+            //     } else {
+            //         // Driving route applied using LEAFBOX OUTING MACHINE
+            //         var routingDrive =  L.Routing.control({
+            //             waypoints: [
+            //                 L.latLng(38.5377, -121.7494),
+            //                 L.latLng(latitude, longitude)
+            //             ],
+            //             router: drouter,
+            //             profile: 'mapbox/walking'
+            //         }).addTo(map);
 
-                    // Getting rid of route (when done?)
-                    document.querySelector('#endd').addEventListener('click', function(){
-                    map.removeControl(routingDrive);
-                    })
-                }
-              });
-
-            // navigator.geolocation.getCurrentPosition((position) => {
-            //         let latitude = position.coords.latitude;
-            //         let longitude = position.coords.longitude;
-
-            //         console.log(`currLat${latitude} and currLong: ${longitude}`)
-            // })
-
+            //         // Getting rid of route (when done?)
+            //         document.querySelector('#endd').addEventListener('click', function(){
+            //         map.removeControl(routingDrive);
+            //         })
+            //     }
+            //   });
+            document.querySelector('#load').className = 'showing';
+            setTimeout(function(){
+                document.querySelector('#load').className = 'hidden';
+            }, 2000)
             
+
+            const way = setInterval(function(){
+                navigator.geolocation.getCurrentPosition((position) => {
+                    let latitude = position.coords.latitude;
+                    let longitude = position.coords.longitude;
+
+                    console.log(`currLat${latitude} and currLong: ${longitude}`)
+
+                    let you = L.marker([latitude, longitude], {icon: eggIcon}).addTo(map).bindPopup("YOU.");
+
+                    // Walking route applied using LEAFBOX OUTING MACHINE
+                    var routingWay =  L.Routing.control({
+                        waypoints: [
+                            L.latLng(38.5377, -121.7494),
+                            L.latLng(latitude, longitude)
+                        ],
+                        router: thisRoute,
+                        profile: mapbox
+                    }).addTo(map);
+
+                    document.querySelector('#endw').addEventListener('click', function(){
+                        map.removeControl(routingWay);
+                    })
+
+                    // if (walking == true) {
+                        
+
+                    //     // Getting rid of route (when done?)
+                    //     document.querySelector('#endw').addEventListener('click', function(){
+                    //         map.removeControl(routingWalk);
+                    //     })
+                    // } else {
+                    //     // Driving route applied using LEAFBOX OUTING MACHINE
+                    //     var routingDrive =  L.Routing.control({
+                    //         waypoints: [
+                    //             L.latLng(38.5377, -121.7494),
+                    //             L.latLng(latitude, longitude)
+                    //         ],
+                    //         router: drouter,
+                    //         profile: 'mapbox/walking'
+                    //     }).addTo(map);
+
+                    //     // Getting rid of route (when done?)
+                    //     document.querySelector('#endd').addEventListener('click', function(){
+                    //     map.removeControl(routingDrive);
+                    //     })
+                    // }
+            
+                    setInterval(function(){
+                        map.removeLayer(you);
+                        map.removeControl(routingWay);
+                    }, 2000)
+                })
+            }, 2000)
+            
+            document.querySelector('#arrival button').addEventListener('click', function(){
+                clearInterval(way);
+            })
 
           } else {
             console.log('Sorry, your browser does not support Geolocation API')
