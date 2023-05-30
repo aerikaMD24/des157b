@@ -39,6 +39,7 @@
     var marker = L.marker([38.5377, -121.7494], {icon: eggIcon}).addTo(map);
     marker.bindPopup("'Eye on Mrak' Egghead"); 
     
+    
     // Routing
     let walking;
     document.querySelector('#drive').addEventListener('click', function(){
@@ -58,7 +59,7 @@
     function reach(pos) {
         const crd = pos.coords;
 
-        if (target.lat <= crd.latitude + 0.0005 && target.lat >= crd.latitude - 0.0005 && target.long <= crd.longitude + 0.0005 && target.long >= crd.longitude - 0.0005) {
+        if (target.lat <= crd.latitude + 0.00025 && target.lat >= crd.latitude - 0.00025 && target.long <= crd.longitude + 0.00005 && target.long >= crd.longitude - 0.00005) {
             console.log("Congratulations, you reached the target");
             document.querySelector('#arrival').className = 'showing';
             navigator.geolocation.clearWatch(id);
@@ -73,8 +74,8 @@
     }
 
     target = {
-        lat: 38.53939,
-        long: -121.75038
+        lat: 38.53950,
+        long: -121.75000
     }
 
     // ~~~
@@ -175,16 +176,16 @@
                     // // Walking route applied using LEAFBOX OUTING MACHINE
                     var routingWay =  L.Routing.control({
                         waypoints: [
-                            L.latLng(38.53939, -121.75038),
+                            L.latLng(38.53950, -121.75000),
                             L.latLng(latitude, longitude)
                         ],
                         router: thisRoute,
                         profile: mapbox
                     }).addTo(map);
 
-                    document.querySelector('#endw').addEventListener('click', function(){
-                        map.removeControl(routingWay);
-                    })
+                    // document.querySelector('#endw').addEventListener('click', function(){
+                    //     map.removeControl(routingWay);
+                    // })
 
                     // if (walking == true) {
                         
