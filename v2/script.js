@@ -63,8 +63,8 @@
             document.querySelector('#arrival').className = 'showing';
             navigator.geolocation.clearWatch(id);
             } else {
-                console.log(`nope lat:${crd.latitude}, tarLat: ${target.lat}`);
-                console.log(`nope long:${crd.longitude}, tarLong: ${target.long}`);
+                // console.log(`nope lat:${crd.latitude}, tarLat: ${target.lat}`);
+                // console.log(`nope long:${crd.longitude}, tarLong: ${target.long}`);
             }
         }
 
@@ -159,19 +159,20 @@
             document.querySelector('#load').className = 'showing';
             setTimeout(function(){
                 document.querySelector('#load').className = 'hidden';
-            }, 2000)
+            }, 5000)
             
 
             const way = setInterval(function(){
                 navigator.geolocation.getCurrentPosition((position) => {
                     let latitude = position.coords.latitude;
                     let longitude = position.coords.longitude;
+                    
 
-                    console.log(`currLat${latitude} and currLong: ${longitude}`)
+                    console.log(`currLat: ${latitude} and currLong: ${longitude}`)
 
                     let you = L.marker([latitude, longitude], {icon: eggIcon}).addTo(map).bindPopup("YOU.");
 
-                    // Walking route applied using LEAFBOX OUTING MACHINE
+                    // // Walking route applied using LEAFBOX OUTING MACHINE
                     var routingWay =  L.Routing.control({
                         waypoints: [
                             L.latLng(38.5377, -121.7494),
@@ -212,9 +213,9 @@
                     setInterval(function(){
                         map.removeLayer(you);
                         map.removeControl(routingWay);
-                    }, 2000)
+                    }, 5000)
                 })
-            }, 2000)
+            }, 5000)
             
             document.querySelector('#arrival button').addEventListener('click', function(){
                 clearInterval(way);
