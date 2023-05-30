@@ -152,6 +152,54 @@ li,  #intro p{
 }
 
 
+/* NEW GELOCATION STUFF */
 
+.leaflet-left {
+  position: fixed;
+}
+
+.leaflet-top.leaflet-right {
+  position: absolute;
+  width: 100%;
+  top: 65%;
+}
+.leaflet-routing-container {
+  border-radius: 30px 30px 0px 0px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 6%;
+  background-color: #F1F4F4;
+  overflow: scroll;
+  font-family: 'Nunito', sans-serif;
+}
+
+#arrival {
+  background-color: #F1F4F4;
+  padding: 6%;
+  border-radius: 30px;
+  width: 80%;
+  margin: auto;
+}
+
+#arrival button {
+  background-color: #4CB688;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #fff;
+  padding: 9px;
+  width: 100%;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 20px;
+  border: 0px;
+}
+
+.hidden {
+  display: none;
+}
+
+.showing {
+  display: block;
+}
 
 }
