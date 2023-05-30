@@ -73,8 +73,8 @@
     }
 
     target = {
-        lat: 38.39365,
-        long: -121.40486
+        lat: 38.53939,
+        long: -121.75038
     }
 
     // ~~~
@@ -175,7 +175,7 @@
                     // // Walking route applied using LEAFBOX OUTING MACHINE
                     var routingWay =  L.Routing.control({
                         waypoints: [
-                            L.latLng(38.5377, -121.7494),
+                            L.latLng(38.53939, -121.75038),
                             L.latLng(latitude, longitude)
                         ],
                         router: thisRoute,
