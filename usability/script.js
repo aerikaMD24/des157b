@@ -225,7 +225,7 @@
             document.querySelector('#load').className = 'showing';
             setTimeout(function(){
                 document.querySelector('#load').className = 'hidden';
-            }, 2500)
+            }, 3000)
 
 
             // Dynamic Footprint marker
