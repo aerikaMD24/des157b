@@ -225,11 +225,8 @@
             document.querySelector('#load').className = 'showing';
             setTimeout(function(){
                 document.querySelector('#load').className = 'hidden';
-            }, 1000)
+            }, 2500)
 
-            setTimeout(function(){
-                document.querySelector('#load').className = 'hidden';
-            }, 1000)
 
             // Dynamic Footprint marker
             const footprint = setInterval(function(){
@@ -258,7 +255,7 @@
                         map.removeLayer(you);
                     })
                 })
-            }, 1000)
+            }, 2500)
 
              // Route applied using LEAFBOX ROUTING MACHINE
              navigator.geolocation.getCurrentPosition((position) => {
