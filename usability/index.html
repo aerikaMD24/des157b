@@ -20,6 +20,9 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    <!-- AOS CSS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- CSS Stylesheet -->
     <link href="styles.css" rel="stylesheet">
 
@@ -29,17 +32,35 @@
      crossorigin=""></script>
     <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
 
+    <!-- Leaflet JS Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Parse JS -->
+    <script src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+
     <!-- Javascript -->
     <script src="script.js" defer></script>
 
 </head>
 <body>
-    <div id="map"></div>
+    <div id="landing" class="showing">
+        <h2>Welcome to User Testing</h2>
+        <p>Your tasks are the following:</p>
+        <ul>
+            <li>Check out your badges!</li>
+            <li>Click on the markers to learn more about the differet seal locations</li>
+            <li>Use the routing function to go to the one of the locations <em>(For user testing, it will only lead you to the library)</em></li>
+        </ul>
+        <button>Let's begin!</button>
+    </div>
+    
+    
+    <div id="map">
+        
+    </div>
+    <img id="badgeBtn" src="images/badge.png">
 
-    <!-- temp buttons -->
-    <button id="drive">drive</button>
-    <button id="walk">walk</button>
-    <button id="end">end</button>
+    <div id="container"></div>
 
     <div id="arrival" class="hidden">
         <h2>You're made it</h2>
@@ -48,41 +69,67 @@
     </div>
 
     <img id="load" src="images/load.png" class="hidden"></img>
-    
-    <!-- <div id="content">
-        <section id="intro">
-            <img src="images/Hero.png" alt="Horizontal photo of Egghead at a glance">
-            <div id="locate">
-                <h2>'Eye on Mrak' Egghead</h2>
-                 
-            </div>
-            <p>The upside-down head points away from the administration building, laughing. On the back of the head, a single eye stares at Mrak Hall.</p>
-        </section>
-        <section id="gallery">
-            <h3>Public Gallery</h3>
-            <div id="imgScroll">
-                <img src="images/1.png" alt="user ">
-                <img src="images/2.png" alt="Horizontal photo of Egghead at a glance">
-                <img src="images/3.png" alt="Horizontal photo of Egghead at a glance">
-                <img src="images/4.png" alt="Horizontal photo of Egghead at a glance">
-            </div>
-            <button id="photoBtn">Add Your Own Photo</button>
-        </section>
-        <section id="edu">
-            <h3>Fun Facts</h3>
-            <ol>
-                <li>Did you know that there the Eggheads was created by Robert Arneson in 1989?</li>
-                <li>Did you know that there the Eggheads was created by Robert Arneson in 1989?</li>
-                <li>Did you know that the first Egghead Music Walk was held on 15 March 2013?</li>
-            </ol>
-        </section>
+
+    <div id="badgePage" class="hidden">
+        <div id="badgeHead">
+            <h2>Badges</h2>
+            <img id="mapBtn" src="images/map.png">
+        </div>
         
-    </div> -->
+        <div id="badges">
+            <div class="icon">
+                <img id="eggy" src="images/shadowhead.png">
+                <h3>Egghead</h3>
+            </div>
+            <div class="icon">
+                <img src="images/shadowdavi.png">
+                <h3>Mondavi</h3>
+            </div>
+            <div class="icon">
+                <img src="images/shadowdavi.png">
+                <h3>Mondavi</h3>
+            </div>
+            <div class="icon">
+                <img src="images/shadowhead.png">
+                <h3>Egghead</h3>
+            </div>
+            <div class="icon">
+                <img src="images/shadowhead.png">
+                <h3>Egghead</h3>
+            </div>
+            <div class="icon">
+                <img id="davi" src="images/shadowdavi.png">
+                <h3>Mondavi</h3>
+            </div>
+            <div class="icon">
+                <img src="images/shadowdavi.png">
+                <h3>Mondavi</h3>
+            </div>
+            <div class="icon">
+                <img src="images/shadowhead.png">
+                <h3>Egghead</h3>
+            </div>
+            <div class="icon">
+                <img src="images/shadowdavi.png">
+                <h3>Mondavi</h3>
+            </div>
+            <div class="icon">
+                <img src="images/shadowhead.png">
+                <h3>Egghead</h3>
+            </div>
+            <div class="icon">
+                <img src="images/shadowhead.png">
+                <h3>Egghead</h3>
+            </div>
+            <div class="icon">
+                <img src="images/shadowdavi.png">
+                <h3>Mondavi</h3>
+            </div>
+        </div>
+        <button id="reset">Reset Badges</button>
+    </div>
 
 </body>
-
-
-
 
 </html>
 
