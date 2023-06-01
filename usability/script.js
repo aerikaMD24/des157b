@@ -85,16 +85,6 @@
                     </div>
                     <button id="photoBtn">Add Your Own Photo</button>
                 </section>
- 
-                <section id="uploading">
-                    <form id="upload">
-                    <label for="fileupload">Upload a File</label>
-                    <input type="file" id="fileupload">
-        
-                    <input type="submit" value="send file" id="submitBtn">
-                    </form>
-                    <div id="uploaded-img"></div>
-                </section>
                 
                 <section id="edu">
                     <h3>Fun Facts</h3>
@@ -220,12 +210,6 @@
 
         // If user allows geolocation...
         if ("geolocation" in navigator) {
-
-            // Loading sign...
-            document.querySelector('#load').className = 'showing';
-            setTimeout(function(){
-                document.querySelector('#load').className = 'hidden';
-            }, 3000)
 
 
             // Dynamic Footprint marker
