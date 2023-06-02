@@ -55,5 +55,11 @@ a {
 #testImgs {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 5%;
+}
+
+#testImgs img {
+    display: block;
+    margin: 0;
 }
