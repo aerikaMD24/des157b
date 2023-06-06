@@ -2,7 +2,7 @@
     "one" : {
         "name" : "'Eye on Mrak' Egghead",
         "location" : "1 Shields Ave, Davis, CA 95616",
-        "coordinates" : "38.535360,  -121.748690",
+        "coordinates" : "38.53950,  -121.75000",
         "lat" : 38.53950,
         "lng" :  -121.75000,
         "img": "Hero.png",
