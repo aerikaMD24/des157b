@@ -89,44 +89,53 @@
         
                 // Function to handle marker click event and display pop-up below the map
                 function displayPopup(markerInfo) {
-                var popupContent = `
                     
-                    <div id="item" data-aos="fade-up" data-aos-duration="1000">
-                        <div id=closePopup></div>
-                        <section id="intro">
-                            <img src="images/${markerInfo.img}" class="titleimg">
-                            <div id="locate">
-                                <h2>${markerInfo.name}</h2>
-                                <img id="locator" src="images/router.png">
-                            </div>
-                            <p id="address"><strong>Address:</strong> ${markerInfo.location}</p>
-                            <p id="description">${markerInfo.description}</p>
-                        </section>
-
-                        <section id="gallery">
-                            <h3>Public Gallery</h4>
-                            <div id="imgScroll">
-                                <img src="images/1.png" alt="user ">
-                                <img src="images/2.png" alt="Horizontal photo of Egghead at a glance">
-                                <img src="images/3.png" alt="Horizontal photo of Egghead at a glance">
-                                <img src="images/4.png" alt="Horizontal photo of Egghead at a glance">
-                            </div>
-                            <button id="photoBtn">Add Your Own Photo</button>
-                        </section>
-                        
-                        <section id="edu">
-                            <h3>Fun Facts</h3>
+                    let intro = `
+        
+                    <section id="intro">
+                        <img src="images/${markerInfo.img}" class="titleimg">
+                        <div id="locate">
+                            <h2>${markerInfo.name}</h2>
+                            <img id="locator" src="images/router.png">
+                        </div>
+                        <h4>Address</h4>
+                        <p id="address">${markerInfo.location}</p>
+                        <h4>Description</h4>
+                        <p id="description">${markerInfo.description}</p>
+                    </section>
+            
+                    
+                    
+                    `;
+            
+                    document.querySelector('#intro').innerHTML = intro;
+            
+                    let gallery = `
+                    
+                    `;
+            
+                    document.querySelector('#imgScroll').innerHTML = gallery;
+            
+                    let fun = `
+                        <h3>Fun Facts</h3>
                             <ol>
                                 <li>${markerInfo.fun1}</li>
                                 <li>${markerInfo.fun2}</li>
                                 <li>${markerInfo.fun3}</li>
                             </ol>
-                        </section>
+                    `;
             
-                    </div>
-                    `;  
-                
-                document.querySelector('#container').innerHTML = popupContent;
+                    document.querySelector('#edu').innerHTML = fun;
+            
+                    let sealText = `
+                        <h3>Seal</h3>
+                        <p id="description">${markerInfo.seal}</p>
+                                
+                    `;
+            
+                    document.querySelector('#sealInfo').innerHTML = sealText;
+            
+                    getPhotos();
 
                 }
         
@@ -293,11 +302,12 @@
                 document.querySelector('#container').className = 'showing';
             })
 
-
-
-            
-
-
+            document.querySelector('#photoBtn').addEventListener('click', function(){
+                console.log('hello');
+                document.querySelector('#openImg').className = 'showing';
+                document.querySelector('#container').className = 'hidden';
+               
+            })
 
         })
     } else {
@@ -365,3 +375,158 @@
     
 
 }())
+
+Parse.initialize("73PmwhWYpnQSgxbIIrZU26yl7lmdQGMPc4q8sC1q","WTaWw3gbdA39gMVJjw3BVJjhud8oML2vLFbpOIUe");
+// Parse server
+Parse.serverURL = 'https://parseapi.back4app.com/';
+
+// let newPhoto;
+document.querySelector('#upload').addEventListener('submit', function(event){
+    event.preventDefault();
+
+    
+
+    const fileUploadControl = document.querySelector('#fileupload');
+    if (fileUploadControl.files.length > 0) {
+        const file = fileUploadControl.files[0];
+        const name = fileUploadControl.files[0].name;
+        const type = fileUploadControl.files[0].type;
+        const size = fileUploadControl.files[0].size;
+        if(size < 100000 && type == 'image/jpeg' || type == 'image/png' || type == 'image/webp'){
+          uploadPhoto(name, file);
+          
+        } else {
+          alert('the file is too big or is not a .jpg or .png file');
+        }
+    }
+});
+
+
+async function uploadPhoto(name, file){
+    const newPhoto = new Parse.Object('photos');
+    newPhoto.set('filename', name);
+    newPhoto.set('file', new Parse.File(name, file));
+    try {
+      const result = await newPhoto.save();
+      // get the ID of the photo saved.
+      console.log(result.id);
+      // A function that runs a new query to get info about the photo you just added
+      getNewPhoto(result.id);
+    } catch (error) {
+      console.error('Error while uploading the photo: ', error);
+    }
+}
+
+async function getNewPhoto(photoId){
+  // which "object" are we dealing with (database table)
+  const records = Parse.Object.extend('photos');
+  // make a new query
+  const query = new Parse.Query(records);
+  // Find the record you just added
+  query.equalTo("objectId", photoId);
+  try{
+    // results holds the whole record and meta data about the record
+    const results = await query.find();
+    // The .get() method gets a speficif field. The url() method is special for files
+    const photoURL = results[0].get('file').url();
+    // get the photo file name from the filename field
+    const photoName = results[0].get('filename');
+    // pass both values into the showUploadedPhoto function
+    showUploadedPhoto(photoURL, photoName);
+  } catch (error) {
+      console.error('Error while getting photo', error);
+  } 
+}
+
+// This function now has two parameters
+function showUploadedPhoto(photoURL, photoName){
+  // single quotes replaced with tick marks to use the photoName
+  let html = `<p>You just uploaded ${photoName}:</p>`;
+  html += `<img src="${photoURL}" alt="${photoName}" alt = "${photoName}">`;
+
+  
+  document.querySelector('#uploaded-img').innerHTML = html;
+}
+
+
+async function getPhotos(){
+
+  console.log("buttonclicked")
+ 
+  try{
+      const records = Parse.Object.extend('photos');
+      const query = new Parse.Query(records);
+      query.descending('createdAt');
+      const results = await query.find();
+      // results.forEach(function(photo){
+      //     console.log(photo);
+      //     const photoURL = results[photo].get('file').url();
+      //     showPhotosOnGallery(photoURL);
+      // });
+      for(i=0; i<results.length; i++){
+        //   document.querySelector('.grid-container').innerHTML += '<div class="grid-item"><img class="slideImage" src="" alt="uploaded photo from gallery"></div>';
+
+        document.querySelector('#imgScroll').innerHTML += '<img class="slideImage" src="" alt="uploaded photo from gallery"></div>';
+          let slideImages = document.querySelectorAll('.slideImage');
+          const photoURL = results[i].get('file').url();
+          slideImages[i].src = `${photoURL}`;
+          console.log(results[i].id);
+          // slideImages[i].className = 'show';
+      };
+      // This is a good place to run a function that clears out the form, which you will write below.
+      // clearForm();
+  } catch (error) {
+      console.error('Error while getting photo', error);
+  } 
+};
+let fetachedImage = false;
+
+document.querySelector('#next5').addEventListener('click', function(){
+  
+  if(!fetachedImage){
+    
+      getPhotos();
+      // showUserWord();
+  }
+
+  document.querySelector('#openImg').className = 'hidden';
+
+  document.querySelector('#container').className = 'showing';
+
+  
+
+
+});
+
+document.querySelector('#previewBtn').addEventListener('click', function(){
+  
+    
+
+    document.querySelector('#previewImgScreen').className = 'showing';
+
+    document.querySelector('#next5').className = 'showing';
+
+    // document.querySelector('#previewBtn').className = 'hidden';
+  
+
+  
+  });
+
+  document.querySelector('#close1').addEventListener('click', function(){
+
+    document.querySelector('#openImg').className = 'hidden';
+
+  
+  });
+
+  document.querySelector('#close2').addEventListener('click', function(){
+  
+    document.querySelector('#previewImgScreen').className = 'hidden';
+  
+  });
+
+  document.querySelector('#begin').addEventListener('click', function(){
+  
+    document.querySelector('#landing').className = 'hidden';
+  
+  });
