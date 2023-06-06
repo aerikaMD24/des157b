@@ -39,10 +39,24 @@
             maxZoom: 19,
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>' 
             }).addTo(map);
+
+            var manIcon = L.Icon.extend({
+                options: {
+                    // find a shadow, adjust size details
+                    // shadowUrl: 'images/leaf-shadow.png',
+                    iconSize:     [50, 60],
+                    shadowSize:   [50, 64],
+                    iconAnchor:   [22, 94],
+                    shadowAnchor: [4, 62],
+                    popupAnchor:  [-3, -76]
+                }
+            })
+
+            var hoomanIcon = new manIcon({iconUrl: 'images/hooman.png'})
         
             // Create Person Marker to locate user on map
-            var marker = L.marker([olatitude, olongitude]).addTo(map);
-            marker.bindPopup('Mondavi Center');
+            var marker = L.marker([olatitude, olongitude], {icon: hoomanIcon}).addTo(map);
+            marker.bindPopup('YOU');
 
             // Define an empty array to store marker objects
             var markers = [];

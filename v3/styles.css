@@ -130,6 +130,7 @@ a:hover{
     padding: 6%;
     background-color: #F1F4F4;
     z-index: 3;
+    overflow-y: scroll;
   }
   
   #landing li {
@@ -518,6 +519,12 @@ a:hover{
 }
   
   }
+
+
+/* hiding routing markers */
+.leaflet-marker-draggable {
+  display: none;
+}
 
 
 
