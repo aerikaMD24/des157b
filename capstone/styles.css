@@ -1,3 +1,4 @@
+/* Mobile CSS Styles*/
 @media only screen and (max-width: 500px) {
 
   /* MOBILE FULL SCREEN */
@@ -16,7 +17,7 @@
     display: flex;
   }
 
-  #locator, #mapBtn, #badgeBtn {
+  #locator, #mapBtn {
     padding: 2%;
     border-radius: 8px;
     background-color: white;
@@ -44,6 +45,11 @@ body{
 
 h1, h2, h3 {
   font-family: 'Poppins', sans-serif;
+}
+
+footer{
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 img{
@@ -378,10 +384,7 @@ a:hover{
       max-width:90%;
       height:100%;
     }
-    
-    /* #previewImgScreen img{
-      max-width: 100%;
-    } */
+
     
     label{
       font-family: 'Poppins', sans-serif;
@@ -406,6 +409,18 @@ a:hover{
       border: 0px;
       /* margin-top: 50px; */
     }
+
+    input::file-selector-button {
+      color:#4CB688;
+      padding:10px;
+      margin-right:10px;
+      font-size: 15px;
+      border-radius: 20px;
+      border: solid 1px #4CB688;
+      font-weight: 700;
+      background-color: #fff;
+    
+    }
     
     
     #fileupload{
@@ -415,7 +430,6 @@ a:hover{
     }
     
     #close1, #close2{
-      /* display: inline-block; */
       position: absolute;
       top:6%;
       right: 4%;
@@ -428,18 +442,6 @@ a:hover{
       font-weight: 400;
       background-color: #fff;
     }
-    /* 
-    #top{
-      max-height: 20%;
-      display: flex;
-      justify-content: space-between;
-    } */
-    
-    /* .fa-regular.fa-x{
-      position: absolute;
-      top:1%;
-      right:4%;
-    } */
     
     a{
       color: #4CB688;
@@ -473,6 +475,10 @@ a:hover{
 }
 
 #arrival {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: #F1F4F4;
   padding: 6%;
   border-radius: 30px;
@@ -517,14 +523,65 @@ a:hover{
   from {transform: rotate(0);}
   to {transform: rotate(360deg);}
 }
-  
-  }
 
+
+#begin{
+  margin:0;
+}
+
+#website{
+  display: block;
+  padding: 4%;
+margin: auto;
+margin-top:10px;
+background-color: #fff;
+border-radius: 10px;
+filter: drop-shadow(0px 0px 4px #cecece);  
+}
+
+#sources{
+  display: flex;
+  flex-direction: column;
+  margin:20px;
+  
+}
 
 /* hiding routing markers */
 .leaflet-marker-draggable {
   display: none;
 }
+
+  
+  }
+
+/* Desktop CSS Styles*/
+.desktop-display{
+  position: absolute;
+  left: 50%;
+  top:  50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  font-weight: 500;
+}
+
+
+#sources{
+  margin:50px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+a{
+  color: #4CB688;
+}
+
+a:hover{
+  color: #cecece;
+}
+
+
+
 
 
 
