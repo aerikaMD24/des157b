@@ -339,7 +339,7 @@ a:hover{
     }
     
     
-    #uploaded-img img{
+    .uploaded-img img{
     max-height: 100%;
     max-width: 100%;
     border-radius: 10px;
@@ -359,7 +359,7 @@ a:hover{
       margin-bottom: 20px;
     }
     
-    #fileupload{
+    #fileupload {
       margin-top: 20px;
     }
 

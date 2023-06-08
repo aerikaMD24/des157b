@@ -52,6 +52,7 @@
 
 </head>
 <body>
+    
     <!-- Desktop to display message telling users to switch to mobile. -->
     <div class="desktop-display">
         <p>For best experience, please access website via mobile device.</p>
@@ -78,16 +79,16 @@
         <!-- Upload Photo Page -->
         <div id="openImg" class="hidden">
            
-            <form id="upload">
+            <form class="upload">
                 
-                <div id="top">
+                <div class="top">
                     <h2>Upload A Photo</h2>
                    
     
                     <button id="close1">Close</button>
                 </div>
                 
-                <input type="file" id="fileupload">
+                <input type="file" class="fileupload">
         
                
     
@@ -98,32 +99,32 @@
     
             <!-- Preview Photo Page -->
             <div id="previewImgScreen" class="hidden">
-                <div id="top">
+                <div class="top">
                     <h2>Preview Image</h2>
                     <button id="close2">Close</button>
                 </div>
                 
-                <div id="uploaded-img"></div>
+                <div class="uploaded-img"></div>
                 <button id="next5" class = "hidden">Post</button>
             </div>
         </div>
 
         <!-- Upload Photo Page -->
-        <div id="uploading" class="hidden">
-            <form id="upload">
+        <div class="uploading hidden">
+            <form class="upload">
                 <label for="fileupload">Upload a File</label>
                 <input type="file" id="fileupload">
     
-                <input type="submit" value="send file" id="submitBtn">
+                <input type="submit" value="send file" class="submitBtn">
             </form>
-                <div id="uploaded-img"></div>
+                <div class="uploaded-img"></div>
         </div>
         
         
 
         <div id="map"></div>
 
-        <img id="badgeBtn" src="images/badgesimg.png">
+        <img id="badgeBtn" src="images/badgesimg.png" alt="badge button">
     
         <div id="container" class="hidden">
             
@@ -151,7 +152,7 @@
         <div id="arrival" class="hidden">
             <h2>You're in the area!</h2>
             <p>Congrats, you've made it here and have earned yourself a new badge! Please check in to collect it.</p>
-            <img src="images/house.png">
+            <img src="images/house.PNG" alt = "house">
             <button>I'm here!</button>
         </div> 
         
@@ -160,21 +161,10 @@
             <div id="badgeHead">
                 <h2>Badges</h2>
             </div>
-            <img id="mapBtn" src="images/map.png">
-    
-            <div id="uploading" class="hidden">
-                <form id="upload">
-                    <label for="fileupload">Upload a File</label>
-                    <input type="file" id="fileupload">
-                    <input type="submit" value="send file" id="submitBtn">
-                    </form>
-                    <div id="uploaded-img"></div>
-                </form>
-            </div>
+            <img id="mapBtn" src="images/map.png" alt="map button">
             
             <div id="badges"></div>
             
-            <!-- <button id="reset">Reset Badges</button> -->
         </div>
 
 
