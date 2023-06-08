@@ -56,7 +56,7 @@
 
             var hoomanIcon = new manIcon({iconUrl: 'images/hooman.PNG'})
         
-            // Create Person Marker to locate user on map
+            // Create Person Marker to locate user on map 
             var marker = L.marker([olatitude, olongitude], {icon: hoomanIcon}).addTo(map);
             marker.bindPopup('YOU');
 
